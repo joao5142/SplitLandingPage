@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.container {
+    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+}
+
+.split.right,
+.split.left {
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    transition: 0.7s ease;
+
+}
+
+.split.left {
+    background-image: url('./images/ps.jpg');
+    left: 0px;
+}
+
+
+.split.left::before,
+.split.right:before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+
+}
+
+.split.left::before {
+    background-color: rgba(70, 130, 180, 0.7);
+    left: 0px;
+}
+
+.split.right::before {
+    background-color: rgb(53, 52, 52, 0.7);
+    right: 0px;
+}
+
+.split.right {
+    background-image: url('./images/xbox.jpg');
+
+    right: 0px;
+}
+
+h1 {
+    position: absolute;
+    font-size: 4rem;
+    color: white;
+
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    white-space: nowrap;
+
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    padding: 20px;
+    width: 240px;
+    font-size: 20px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+    transition: all 0.7s ease;
+}
+
+.split.right a span,
+.split.left a span {
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.split.right a:hover span,
+.split.left a:hover span {
+
+    transform: translateY(-5px);
+}
+
+.split.left a:hover {
+    background-color: #5754EC;
+    border-color: #5754EC;
+}
+
+
+.split.right a:hover {
+    background-color: #1C7A1C;
+    border-color: #1C7A1C;
+}
+
+.container.width-change .split.right {
+    width: 75%;
+    z-index: 4;
+
+}
+
+.container.width-change .split.left {
+    width: 25%;
+    z-index: 3;
+}
+
+.container.other-width .split.left {
+    width: 75%;
+    z-index: 4;
+}
+
+.container.other-width .split.right {
+    width: 25%;
+    z-index: 3;
+}
+
+@media(max-width:800px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+}
