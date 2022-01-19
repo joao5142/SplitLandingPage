@@ -7,5 +7,5 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
  </div>
 <h2>Preview</h2>
-<img margin-bottom="20px" src="assets/img/readme.PNG"">
+<img margin-bottom="20px" src="images/readme.PNG"">
 <h4  style="display: inline_block">Visualização do site :</h4><a style="display: inline_block" target="blank" href="https://splitladingpage.netlify.app/">Preview no Netlify</a>
