@@ -144,3 +144,15 @@ a {
 
 
 }
+
+@media(max-width:500px) {
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    a {
+        width: 150px;
+    }
+
+}
