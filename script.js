@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 const left = document.querySelector('.split.left');
 const right = document.querySelector('.split.right');
+const splitEl = document.querySelectorAll('.split');
 const links = document.querySelectorAll('.split a');
 
 links.forEach(link => {
@@ -25,4 +26,13 @@ right.addEventListener('mouseenter', () => {
 });
 right.addEventListener('mouseleave', () => {
     container.classList.remove('width-change');
+});
+
+//event mobile
+splitEl.forEach(split => {
+    split.addEventListener('touchmove', () => {
+        container.classList.remove('width-change');
+        container.classList.remove('other-width');
+        console.log("dblclick event");
+    });
 });
